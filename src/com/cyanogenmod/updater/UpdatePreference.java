@@ -66,7 +66,7 @@ public class UpdatePreference extends Preference implements OnClickListener, OnL
             if (mOnActionListener == null) {
                 return;
             }
-
+            
             switch (mStyle) {
                 case STYLE_DOWNLOADED:
                     mOnActionListener.onStartUpdate(UpdatePreference.this);
@@ -101,8 +101,8 @@ public class UpdatePreference extends Preference implements OnClickListener, OnL
         mProgressBar = (ProgressBar)view.findViewById(R.id.download_progress_bar);
 
         mUpdatesPref = view.findViewById(R.id.updates_pref);
-        mUpdatesPref.setOnClickListener(this);
-        mUpdatesPref.setOnLongClickListener(this);
+        mUpdatesPref.setOnClickListener(mButtonClickListener);
+        mUpdatesPref.setOnLongClickListener(mButtonClickListener);
 
         // Update the views
         updatePreferenceViews();
