@@ -102,7 +102,7 @@ public class UpdatePreference extends Preference implements OnClickListener, OnL
 
         mUpdatesPref = view.findViewById(R.id.updates_pref);
         mUpdatesPref.setOnClickListener(mButtonClickListener);
-        mUpdatesPref.setOnLongClickListener(mButtonClickListener);
+        //mUpdatesPref.setOnLongClickListener(mButtonClickListener);
 
         // Update the views
         updatePreferenceViews();
